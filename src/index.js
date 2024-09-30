@@ -75,7 +75,7 @@ const swiper = new Swiper("#hero .swiper", {
     delay: 5000, // 3 seconds delay between slides
     disableOnInteraction: false, // Continue autoplay after user interaction
   },
-
+  speed: 1000,
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-next",
