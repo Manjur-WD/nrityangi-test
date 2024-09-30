@@ -44,6 +44,16 @@
 </head>
 
 <body>
+    <!-- Background Audio -->
+    <audio id="backgroundAudio" loop autoplay>
+        <source src="./src/images/old_Amrapali-Classical Dance Music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Mute/Unmute Button -->
+    <button id="muteButton" class="fixed top-4 right-4 z-50 bg-white rounded-full p-2 shadow-md">
+        <i id="muteIcon" class="ri-volume-up-line text-2xl"></i>
+    </button>
 
     <!-- HEADER SECTION START -->
     <header class="sticky top-0 left-0 w-full z-50 backdrop-blur-md">
@@ -174,7 +184,8 @@
         <section class="about-section p-10 lg:p-20" id="about">
             <div class="container grid grid-cols-1 lg:grid-cols-2 items-center ">
                 <div class="about-content">
-                    <h2 class="font-black lg:font-bold text-white uppercase text-3xl md:text-4xl lg:text-8xl tracking-wider">About Us</h2>
+                    <h2 class="font-black text-white uppercase text-3xl md:text-4xl lg:text-6xl tracking-wider">
+                        About Us</h2>
                     <p class="text-white mt-5">Our Odissi Dance School is dedicated to preserving and promoting the
                         rich heritage of Odissi dance. With a passion for this classical Indian dance form, we offer
                         comprehensive training programs for dancers of all ages and levels. Our experienced and
@@ -182,7 +193,7 @@
                         where students can develop their skills, explore their creativity, and appreciate the cultural
                         significance of Odissi.
                     </p>
-                    <div class="about-points grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+                    <div class="about-points grid grid-cols-1 lg:grid-cols-2 gap-8 my-10">
                         <div class="about-point">
                             <h3 class="text-white text-2xl font-black lg:mb-3 mb-1">
                                 <span><img src="./src/images/bulletpoint.png" alt="Nrityangi Dance Academy"
@@ -219,17 +230,87 @@
                             <p class="text-white">We foster a sense of cultural appreciation and understanding through
                                 our programs, helping students connect with the rich history and traditions of Odissi.
                             </p>
+
                         </div>
 
                     </div>
+                    <a href="about.html" class="btn-primary know-about-more-btn px-10 py-4"><span>Know More
+                        </span><span><img src="./src/images/Arrow 1.png" alt="Nrityangi Dance Academy"
+                                class="inline-block ml-5"></span></a>
                 </div>
                 <div class="about-image relative">
-                    <img src="./src/images/about-img.png" alt="Nrityangi Dance Academy" class="lg:w-[65%] w-[90%] ml-auto relative z-10">
-                    <img src="./src/images/about-img-bg.webp" alt="Nrityangi Dance Academy" class="about-img-bg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[80%] w-full mx-auto ">
+                    <img src="./src/images/about-img.png" alt="Nrityangi Dance Academy"
+                        class="about-img lg:w-[65%] w-[90%] ml-auto relative z-10">
+                    <img src="./src/images/about-img-bg.webp" alt="Nrityangi Dance Academy"
+                        class="about-img-bg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[80%] w-full mx-auto ">
                 </div>
             </div>
         </section>
         <!-- ABOUT SECTION END -->
+
+        <!-- WHY CHOOSE US SECTION START -->
+        <section class="why-choose-us-section p-10 lg:p-20" id="why-choose-us">
+            <div class="container">
+                <h2 class="font-black uppercase text-3xl md:text-6xl tracking-wider text-right">WHY PEOPLE <span
+                        class="text-primary">CHOOSE US</span></h2>
+                <div class="why-choose-us-main grid grid-cols-1 lg:grid-cols-3 gap-10 my-20">
+                    <div class="why-choose-us-point flex flex-col justify-between">
+                        <div class="wcup-content w-[60%] ml-auto text-right">
+
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                        <div class="wcup-content w-[60%] mr-auto text-left">
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                        <div class="wcup-content w-[60%] ml-auto text-right">
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-us-image w-[95%] mx-auto relative mt-10 mb-20">
+                        <img src="./src/images/why-choose-img.png" alt="Nrityangi Dance Academy"
+                            class="w-full absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div class="circles">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                        </div>
+                    </div>
+                    <div class="why-choose-us-point flex flex-col justify-between">
+                        <div class="wcup-content w-[60%] mr-auto text-left">
+
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                        <div class="wcup-content w-[60%] ml-auto text-right">
+
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                        <div class="wcup-content w-[60%] mr-auto text-left">
+
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                                    src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
+                                    class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
+                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WHY CHOOSE US SECTION END -->
     </main>
     <!-- MAIN SECTION END -->
 
@@ -249,6 +330,30 @@
 
     <!-- Main JavaScript file for the website -->
     <script type="module" src="./src/index.js"></script>
+
+    <!-- Audio Control Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('backgroundAudio');
+            const muteButton = document.getElementById('muteButton');
+            const muteIcon = document.getElementById('muteIcon');
+
+            // Start playing audio when the page loads
+            audio.play();
+
+            muteButton.addEventListener('click', function () {
+                if (audio.muted) {
+                    audio.muted = false;
+                    muteIcon.classList.remove('ri-volume-mute-line');
+                    muteIcon.classList.add('ri-volume-up-line');
+                } else {
+                    audio.muted = true;
+                    muteIcon.classList.remove('ri-volume-up-line');
+                    muteIcon.classList.add('ri-volume-mute-line');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

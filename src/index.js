@@ -90,3 +90,94 @@ const swiper = new Swiper("#hero .swiper", {
 });
 
 // Hero section code end
+
+// About Section Start
+
+const aboutPoints = document.querySelectorAll(".about-point");
+
+gsap.from(".about-content p", {
+  scrollTrigger: {
+    trigger: "#about",
+    start: "top 70%",
+  },
+  opacity: 0,
+  scale: 0.9,
+  duration: 0.5,
+  ease: "power2.inOut",
+});
+
+gsap.from(".about-img", {
+  scrollTrigger: {
+    trigger: "#about",
+    start: "top 70%",
+  },
+  opacity: 0,
+  x: 40,
+  duration: 0.5,
+  ease: "back.inOut",
+});
+
+gsap.from(aboutPoints, {
+  scrollTrigger: {
+    trigger: "#about",
+    start: "top 50%",
+  },
+  opacity: 0,
+  y: 20,
+  stagger: 0.5,
+  duration: 0.5,
+  ease: "power2.inOut",
+});
+
+// About Section End
+
+// Why Choose Us Section Start
+const wcupContent = document.querySelectorAll(".wcup-content");
+console.log(wcupContent);
+
+gsap.from(".why-choose-us-image", {
+  scrollTrigger: {
+    trigger: "#why-choose-us",
+    start: "top 50%",
+  },
+  opacity: 0,
+  scale: 0.5,
+  duration: 1,
+  ease: "back.inOut",
+});
+
+gsap.from(wcupContent, {
+  scrollTrigger: {
+    trigger: "#about",
+    start: "top 50%",
+  },
+  opacity: 0,
+  scale: 0.9,
+  duration: 0.8,
+  ease: "back.Out",
+});
+
+// Why Choose Us Section End
+
+// Audio Control Script
+
+document.addEventListener("DOMContentLoaded", function () {
+  const audio = document.getElementById("backgroundAudio");
+  const muteButton = document.getElementById("muteButton");
+  const muteIcon = document.getElementById("muteIcon");
+
+  // Start playing audio when the page loads
+  audio.play();
+
+  muteButton.addEventListener("click", function () {
+    if (audio.muted) {
+      audio.muted = false;
+      muteIcon.classList.remove("ri-volume-mute-line");
+      muteIcon.classList.add("ri-volume-up-line");
+    } else {
+      audio.muted = true;
+      muteIcon.classList.remove("ri-volume-up-line");
+      muteIcon.classList.add("ri-volume-mute-line");
+    }
+  });
+});
