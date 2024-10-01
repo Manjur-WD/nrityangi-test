@@ -3,7 +3,6 @@ const lenis = new Lenis({
   duration: 1.2,
 });
 
-
 // Request Animation Frame loop
 function raf(time) {
   lenis.raf(time);
@@ -11,8 +10,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-
 
 // This is for header section
 const btnMenu = document.querySelector(".btn-menu");
@@ -77,7 +74,7 @@ btnClose.addEventListener("click", () => toggleNavigation(false, false));
 
 // Hero section code
 
-const swiper = new Swiper("#hero .swiper", {
+const swiper1 = new Swiper("#hero .swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -106,6 +103,35 @@ const swiper = new Swiper("#hero .swiper", {
 });
 
 // Hero section code end
+// Class section code
+
+const swiper2 = new Swiper(".class-slider .swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  // Enable fade effect
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  // Add autoplay
+  autoplay: {
+    delay: 5000, // 3 seconds delay between slides
+    disableOnInteraction: false, // Continue autoplay after user interaction
+  },
+  speed: 1000,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+
+  // Disable pagination (dots)
+  pagination: false,
+});
+
+// Class section code end
 
 // About Section Start
 
@@ -225,4 +251,3 @@ animateAboutSection();
 animateWhyChooseUsSection();
 
 // Why Choose Us Section End
-
