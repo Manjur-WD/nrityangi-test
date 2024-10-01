@@ -182,7 +182,7 @@ main {
 /* HERO SECTION START */
 
 #hero {
-    height: calc(100vh - 108px);
+    min-height: calc(100vh - 108px);
     /* height: 100vh; */
     position: relative;
 }
@@ -490,7 +490,7 @@ main {
 /* ABOUT SECTION START */
 
 .about-section {
-    height: calc(100vh - 108px);
+    min-height: calc(100vh - 108px);
     background: url(./images/About\ Us\ Section.webp) no-repeat top center/cover;
 }
 
@@ -618,7 +618,7 @@ main {
 
 .our-featured-classes {
     background: url(./images/Our\ Featured\ Classes.png) no-repeat top left/cover;
-    height: 100vh;
+    min-height: calc(100vh - 108px);
     width: 100%;
 }
 
