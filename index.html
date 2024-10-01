@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Web App Manifest -->
     <link rel="manifest" href="./src/images/favicon/site.webmanifest">
+    <!-- Lenis smooth scrolling -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -44,19 +46,9 @@
 </head>
 
 <body>
-    <!-- Background Audio -->
-    <audio id="backgroundAudio" loop autoplay>
-        <source src="./src/images/old_Amrapali-Classical Dance Music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Mute/Unmute Button -->
-    <button id="muteButton" class="fixed top-4 right-4 z-50 bg-white rounded-full p-2 shadow-md">
-        <i id="muteIcon" class="ri-volume-up-line text-2xl"></i>
-    </button>
 
     <!-- HEADER SECTION START -->
-    <header class="sticky top-0 left-0 w-full z-50 backdrop-blur-md">
+    <header class="backdrop-blur-md">
         <div class="header-wrapper flex justify-between items-center py-4 px-6 container">
             <a href="index.html" class="logo">
                 <img src="./src/images/NritangiLogo.png" alt="Nrityangi Dance Academy">
@@ -81,7 +73,7 @@
     <!-- HEADER SECTION END -->
 
     <!-- MAIN SECTION START -->
-    <main>
+    <main data-scroll-container>
         <!-- HERO SECTION START -->
         <section id="hero" class="container">
             <div class="swiper">
@@ -198,37 +190,33 @@
                             <h3 class="text-white text-2xl font-black lg:mb-3 mb-1">
                                 <span><img src="./src/images/bulletpoint.png" alt="Nrityangi Dance Academy"
                                         class="inline-block"></span>
-                                Experienced Faculty:
+                                        Cultural Heritage:
                             </h3>
-                            <p class="text-white">Our team of experienced Odissi dancers and teachers brings years of
-                                expertise and knowledge to our programs.</p>
+                            <p class="text-white">Odissi is a classical Indian dance form deeply rooted in the traditions of Odisha.</p>
                         </div>
                         <div class="about-point">
                             <h3 class="text-white text-2xl font-black lg:mb-3 mb-1">
                                 <span><img src="./src/images/bulletpoint.png" alt="Nrityangi Dance Academy"
                                         class="inline-block"></span>
-                                Comprehensive Training:
+                                        Spiritual Significance:
                             </h3>
-                            <p class="text-white"> We offer a wide range of classes, workshops, and performances to
-                                cater to dancers of all levels, from beginners to advanced.</p>
+                            <p class="text-white">  It is often performed as a form of worship, seeking spiritual enlightenment.</p>
                         </div>
                         <div class="about-point">
                             <h3 class="text-white text-2xl font-black lg:mb-3 mb-1">
                                 <span><img src="./src/images/bulletpoint.png" alt="Nrityangi Dance Academy"
                                         class="inline-block"></span>
-                                Authentic Odissi:
+                                        Artistic Expression:
                             </h3>
-                            <p class="text-white">Our curriculum is rooted in the traditional techniques and styles of
-                                Odissi, ensuring that students receive authentic training.</p>
+                            <p class="text-white">Odissi combines intricate movements, mudras, and expressions to convey emotions and stories.</p>
                         </div>
                         <div class="about-point">
                             <h3 class="text-white text-2xl font-black lg:mb-3 mb-1">
                                 <span><img src="./src/images/bulletpoint.png" alt="Nrityangi Dance Academy"
                                         class="inline-block"></span>
-                                Cultural Immersion:
+                                        Physical and Mental Benefits:
                             </h3>
-                            <p class="text-white">We foster a sense of cultural appreciation and understanding through
-                                our programs, helping students connect with the rich history and traditions of Odissi.
+                            <p class="text-white"> Practicing Odissi offers physical and mental benefits, including improved flexibility, balance, and concentration.
                             </p>
 
                         </div>
@@ -257,22 +245,22 @@
                     <div class="why-choose-us-point flex flex-col justify-between">
                         <div class="wcup-content w-[60%] ml-auto text-right">
 
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Experienced Instructors</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p>Learn from dedicated Odissi professionals with years of experience.</p>
                         </div>
                         <div class="wcup-content w-[60%] mr-auto text-left">
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Comprehensive Curriculum</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p>Master all aspects of Odissi dance, from basic techniques to advanced choreography.</p>
                         </div>
                         <div class="wcup-content w-[60%] ml-auto text-right">
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Personalized Attention</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p>Receive tailored guidance and support in small class sizes.</p>
                         </div>
                     </div>
                     <div class="why-choose-us-image w-[95%] mx-auto relative mt-10 mb-20">
@@ -287,24 +275,24 @@
                     <div class="why-choose-us-point flex flex-col justify-between">
                         <div class="wcup-content w-[60%] mr-auto text-left">
 
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Supportive Community</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p> Join a welcoming group of dancers of all ages and backgrounds.</p>
                         </div>
                         <div class="wcup-content w-[60%] ml-auto text-right">
 
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Modern Facilities</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p>Practice in a comfortable and well-equipped studio.</p>
                         </div>
                         <div class="wcup-content w-[60%] mr-auto text-left">
 
-                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>lorem ipsum</span><img
+                            <h3 class="lg:text-4xl text-2xl font-black capitalize"><span>Performance Opportunities</span><img
                                     src="./src/images/round-star.png" alt="Nrityangi Dance Academy"
                                     class="inline-block ml-2 lg:w-10 w-[10%]"></h3>
-                            <p>A dancer performing a complex mudra (hand gesture) with a serene expression</p>
+                            <p> Showcase your skills and gain valuable stage experience through regular performances.</p>
                         </div>
                     </div>
                 </div>
@@ -313,6 +301,8 @@
         <!-- WHY CHOOSE US SECTION END -->
     </main>
     <!-- MAIN SECTION END -->
+
+
 
     <!-- GSAP (GreenSock Animation Platform) core library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -327,33 +317,14 @@
     <!-- Swiper.js library -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
     <!-- Main JavaScript file for the website -->
     <script type="module" src="./src/index.js"></script>
 
-    <!-- Audio Control Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const audio = document.getElementById('backgroundAudio');
-            const muteButton = document.getElementById('muteButton');
-            const muteIcon = document.getElementById('muteIcon');
+    
 
-            // Start playing audio when the page loads
-            audio.play();
 
-            muteButton.addEventListener('click', function () {
-                if (audio.muted) {
-                    audio.muted = false;
-                    muteIcon.classList.remove('ri-volume-mute-line');
-                    muteIcon.classList.add('ri-volume-up-line');
-                } else {
-                    audio.muted = true;
-                    muteIcon.classList.remove('ri-volume-up-line');
-                    muteIcon.classList.add('ri-volume-mute-line');
-                }
-            });
-        });
-    </script>
+
 </body>
 
 </html>

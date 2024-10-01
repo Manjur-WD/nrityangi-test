@@ -1,3 +1,19 @@
+// Lenis smooth scrolling
+const lenis = new Lenis({
+  duration: 1.2,
+});
+
+
+// Request Animation Frame loop
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+
 // This is for header section
 const btnMenu = document.querySelector(".btn-menu");
 const btnClose = document.querySelector(".btn-close");
@@ -95,89 +111,118 @@ const swiper = new Swiper("#hero .swiper", {
 
 const aboutPoints = document.querySelectorAll(".about-point");
 
-gsap.from(".about-content p", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 70%",
-  },
-  opacity: 0,
-  scale: 0.9,
-  duration: 0.5,
-  ease: "power2.inOut",
-});
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".about-img", {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 70%",
-  },
-  opacity: 0,
-  x: 40,
-  duration: 0.5,
-  ease: "back.inOut",
-});
+const animateAboutSection = () => {
+  const mm = gsap.matchMedia();
 
-gsap.from(aboutPoints, {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 50%",
-  },
-  opacity: 0,
-  y: 20,
-  stagger: 0.5,
-  duration: 0.5,
-  ease: "power2.inOut",
-});
+  mm.add("(min-width: 768px)", () => {
+    gsap.from(".about-content p", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 70%",
+        once: true,
+      },
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+
+    gsap.from(".about-img", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 70%",
+        once: true,
+      },
+      opacity: 0,
+      x: 40,
+      duration: 0.5,
+      ease: "back.inOut",
+    });
+
+    gsap.from(aboutPoints, {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 50%",
+        once: true,
+      },
+      opacity: 0,
+      y: 20,
+      stagger: 0.5,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+  });
+
+  mm.add("(max-width: 767px)", () => {
+    gsap.from([".about-content p", ".about-img", ...aboutPoints], {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%",
+        once: true,
+      },
+      opacity: 0,
+      y: 20,
+      stagger: 0.3,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+  });
+};
 
 // About Section End
 
 // Why Choose Us Section Start
 const wcupContent = document.querySelectorAll(".wcup-content");
-console.log(wcupContent);
 
-gsap.from(".why-choose-us-image", {
-  scrollTrigger: {
-    trigger: "#why-choose-us",
-    start: "top 50%",
-  },
-  opacity: 0,
-  scale: 0.5,
-  duration: 1,
-  ease: "back.inOut",
-});
+const animateWhyChooseUsSection = () => {
+  const mm = gsap.matchMedia();
 
-gsap.from(wcupContent, {
-  scrollTrigger: {
-    trigger: "#about",
-    start: "top 50%",
-  },
-  opacity: 0,
-  scale: 0.9,
-  duration: 0.8,
-  ease: "back.Out",
-});
+  mm.add("(min-width: 768px)", () => {
+    gsap.from(".why-choose-us-image", {
+      scrollTrigger: {
+        trigger: "#why-choose-us",
+        start: "top 50%",
+        once: true,
+      },
+      opacity: 0,
+      scale: 0.5,
+      duration: 1,
+      ease: "back.inOut",
+    });
+
+    gsap.from(wcupContent, {
+      scrollTrigger: {
+        trigger: "#why-choose-us",
+        start: "top 50%",
+        once: true,
+      },
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.8,
+      ease: "back.out",
+    });
+  });
+
+  mm.add("(max-width: 767px)", () => {
+    gsap.from([".why-choose-us-image", ...wcupContent], {
+      scrollTrigger: {
+        trigger: "#why-choose-us",
+        start: "top 80%",
+        once: true,
+      },
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+  });
+};
+
+// Initialize animations
+animateAboutSection();
+animateWhyChooseUsSection();
 
 // Why Choose Us Section End
 
-// Audio Control Script
-
-document.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("backgroundAudio");
-  const muteButton = document.getElementById("muteButton");
-  const muteIcon = document.getElementById("muteIcon");
-
-  // Start playing audio when the page loads
-  audio.play();
-
-  muteButton.addEventListener("click", function () {
-    if (audio.muted) {
-      audio.muted = false;
-      muteIcon.classList.remove("ri-volume-mute-line");
-      muteIcon.classList.add("ri-volume-up-line");
-    } else {
-      audio.muted = true;
-      muteIcon.classList.remove("ri-volume-up-line");
-      muteIcon.classList.add("ri-volume-mute-line");
-    }
-  });
-});

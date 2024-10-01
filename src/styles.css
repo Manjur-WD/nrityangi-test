@@ -9,11 +9,14 @@
 html,
 body {
     font-family: 'Playfair Display', serif;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+
+
+.is-sticky {
+    /* Add styles for when the header is sticky */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Customizing the scrollbar */
@@ -48,6 +51,14 @@ body {
 }
 
 header {
+    position: fixed;
+    /* Change from sticky to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+    /* Smooth transition */
     background: linear-gradient(to right, #D9D9D9, transparent);
 }
 
@@ -159,6 +170,10 @@ nav ul li.active::after {
     border-radius: 50%;
     cursor: pointer;
     display: none;
+}
+
+main {
+    margin-top: 108px;
 }
 
 
@@ -526,6 +541,11 @@ nav ul li.active::after {
 
 /* WHY CHOOSE US SECTION START */
 
+#why-choose-us {
+    background: linear-gradient(rgba(255, 255, 255, 0.877), rgba(255, 255, 255, 0.74)), url(./images/why-bg.webp) no-repeat center/cover;
+    background-attachment: fixed;
+}
+
 .why-choose-us-section h2::after {
     content: "";
     display: block;
@@ -540,11 +560,11 @@ nav ul li.active::after {
     filter: drop-shadow(5px 5px 2px #e2e2e2);
 }
 
-.wcup-content{
+.wcup-content {
     transition: 0.5s;
 }
 
-.wcup-content:hover{
+.wcup-content:hover {
     scale: 1.1;
 }
 
@@ -556,7 +576,7 @@ nav ul li.active::after {
 
 .circles>div {
     animation: growAndFade 3s infinite ease-out;
-    background-color: #c7c5c5;
+    background-color: #575757;
     border-radius: 50%;
     height: 100%;
     opacity: 0;
@@ -574,6 +594,10 @@ nav ul li.active::after {
 
 .circles .circle3 {
     animation-delay: 3s;
+}
+
+.wcup-content h3{
+    color: #D2462A;
 }
 
 @keyframes growAndFade {
