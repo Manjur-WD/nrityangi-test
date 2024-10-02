@@ -251,3 +251,50 @@ animateAboutSection();
 animateWhyChooseUsSection();
 
 // Why Choose Us Section End
+
+// our featured classes
+
+ // Animate the title and paragraph
+ gsap.from(".our-featured-content h2, .our-featured-content p", {
+  scrollTrigger: {
+      trigger: "#our-featured-classes",
+      start: "top 80%", // Start the animation when the top of the section is 80% from the top of the viewport
+      toggleActions: "play none none reverse", // Play the animation on enter and reverse on leave
+  },
+  y: 50, // Start position
+  opacity: 0, // Start opacity
+  duration: 1, // Animation duration
+  ease: "power2.out",
+  stagger: 0.2 // Stagger the animations for title and paragraph
+});
+
+// OUR COACHES SECTION
+
+// Animate the title
+gsap.from(".our-coach-content h2", {
+  scrollTrigger: {
+      trigger: ".our-dance-coaches",
+      start: "top 80%", // Start the animation when the top of the section is 80% from the top of the viewport
+      toggleActions: "play none none reverse", // Play the animation on enter and reverse on leave
+  },
+  y: 50, // Start position
+  opacity: 0, // Start opacity
+  duration: 1, // Animation duration
+  ease: "power2.out"
+});
+
+// Animate coach cards
+gsap.utils.toArray(".dance-coach").forEach((card, index) => {
+  gsap.from(card, {
+      scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+      },
+      y: 50, // Start position
+      opacity: 0, // Start opacity
+      duration: 0.5, // Animation duration
+      ease: "power2.out",
+      delay: index * 0.1 // Staggering animation for each card
+  });
+});
