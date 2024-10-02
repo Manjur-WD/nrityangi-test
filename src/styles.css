@@ -511,6 +511,16 @@ main {
     margin-top: 20px;
 }
 
+.our-dance-coaches h2::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    background: black;
+    margin-left: 27%;
+    margin-top: 20px;
+}
+
 .about-image img {
     filter: drop-shadow(2px 4px 6px #D2462A);
 }
@@ -664,6 +674,40 @@ main {
     background-color: #D2462A;
 }
 
+
+/* OUR DANCE COACHES  */
+.our-dance-coaches{
+    background: url(./images/Our\ Coaches.png) no-repeat center/cover;
+
+}
+
+.dance-coach{
+    background-color: white;
+    box-shadow: 0 0 10px #c9c7c7;
+    transition: 0.5s;
+}
+
+.dance-coach:hover{
+    scale: 1.1;
+}
+
+.dance-coach img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.dance-coach h3{
+    background: linear-gradient(#4B0608,#D2462A);
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    transform: translateY(-20px);
+    box-shadow: 0 0 10px white;
+}
+
+
 /* RESPONSIVE CODE */
 
 @media(max-width: 992px) {
@@ -757,6 +801,10 @@ main {
 
     .about-content h2::after {
         width: 100px;
+    }
+    .our-dance-coaches h2:after{
+        width: 200px;
+        margin-left: 0;
     }
 
 }
