@@ -738,7 +738,7 @@ footer ul li {
     margin-bottom: 10px;
 }
 
-footer ul a,span{
+footer ul a,footer ul span{
     color: white;
 
 }
