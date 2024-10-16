@@ -501,6 +501,11 @@ main {
     font-weight: 900;
 } */
 
+.about-section .origins{
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 0px rgb(255, 255, 255);
+}
+
 .about-content h2::after,
 .our-featured-classes h2::after {
     content: "";
@@ -509,6 +514,10 @@ main {
     height: 2px;
     background: white;
     margin-top: 20px;
+}
+
+.about-content h2 img{
+    filter: invert(1);
 }
 
 .our-dance-coaches h2::after{
