@@ -311,7 +311,7 @@ gsap.utils.toArray(".dance-coach").forEach((card, index) => {
 //   scrollTrigger: {
 //     trigger: ".about-section",
 //     // markers: true,
-//     start: "top 10%",
+//     start: "top top",
 //     end: "+=" + amounttoScroll,
 //     scrub: 1,
 //     pin: true,
