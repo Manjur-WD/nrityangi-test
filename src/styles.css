@@ -491,7 +491,18 @@ main {
 
 .about-section {
     min-height: calc(100vh - 108px);
-    background: url(./images/About\ Us\ Section.webp) no-repeat top center/cover;
+    background: linear-gradient(to left, #4B0608, #D2462A)
+}
+
+.about-horizontal-scroller {
+    /* width: 300vw; */
+
+}
+
+.about-section h2,
+h3,
+p {
+    color: white;
 }
 
 /* .about-content h2 {
@@ -501,7 +512,7 @@ main {
     font-weight: 900;
 } */
 
-.about-section .origins{
+.about-section .origins {
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 5px 5px 0px rgb(255, 255, 255);
 }
@@ -512,15 +523,17 @@ main {
     display: block;
     width: 300px;
     height: 2px;
-    background: white;
+    background: rgb(255, 255, 255);
     margin-top: 20px;
 }
 
-.about-content h2 img{
+
+
+.about-content h2 img {
     filter: invert(1);
 }
 
-.our-dance-coaches h2::after{
+.our-dance-coaches h2::after {
     content: "";
     display: block;
     width: 300px;
@@ -530,8 +543,48 @@ main {
     margin-top: 20px;
 }
 
+.about-image {
+    position: relative;
+}
+
 .about-image img {
-    filter: drop-shadow(2px 4px 6px #D2462A);
+    filter: drop-shadow(2px 4px 6px #000000);
+}
+
+.dance-image {
+    position: relative;
+}
+
+.dance-image img {
+    filter: drop-shadow(0 0 2px black);
+}
+
+.dance-image::before {
+    content: "";
+    width: 100%;
+    height: 80%;
+    background-color: #D2462A;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    filter: blur(5px);
+    border-radius: 50%;
+}
+
+.about-image::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: #D2462A;
+    filter: blur(50px);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-40%);
 }
 
 .know-about-more-btn {
@@ -554,6 +607,24 @@ main {
     color: #000;
     border: 2px solid #000;
     box-shadow: 5px 5px 0px #4B0608;
+}
+
+.join-dance img {
+    box-shadow: 10px 10px 0 black;
+}
+
+.join-dance::before{
+    content: "";
+    height: 100%;
+    width: 80%;
+    background-color: #D2462A;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-40%);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
 }
 
 
@@ -646,7 +717,7 @@ main {
     z-index: 1;
 }
 
-.class-card img{
+.class-card img {
     height: 400px;
     object-fit: cover;
     object-position: top;
@@ -685,28 +756,28 @@ main {
 
 
 /* OUR DANCE COACHES  */
-.our-dance-coaches{
+.our-dance-coaches {
     background: url(./images/Our\ Coaches.png) no-repeat center/cover;
 
 }
 
-.dance-coach{
+.dance-coach {
     background-color: white;
     box-shadow: 0 0 10px #c9c7c7;
     transition: 0.5s;
 }
 
-.dance-coach:hover{
+.dance-coach:hover {
     scale: 1.1 !important;
 }
 
-.dance-coach img{
+.dance-coach img {
     height: 300px;
     object-fit: cover;
 }
 
-.dance-coach h3{
-    background: linear-gradient(#4B0608,#D2462A);
+.dance-coach h3 {
+    background: linear-gradient(#4B0608, #D2462A);
     padding: 10px;
     width: 80%;
     margin: 0 auto;
@@ -718,26 +789,26 @@ main {
 
 /* FOOTER */
 
-footer{
-   background: black;
+footer {
+    background: black;
 }
 
-footer .social-icons i{
-color: white;
-font-size: 20px;
-padding: 5px 10px;
-display: inline-block;
-background: linear-gradient(#4B0608,#D2462A);
-border-radius: 50%;
-margin-right: 10px;
-transition: 1;
+footer .social-icons i {
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    display: inline-block;
+    background: linear-gradient(#4B0608, #D2462A);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 1;
 }
 
-footer .social-icons i:hover{
+footer .social-icons i:hover {
     scale: 1.1;
 }
 
-footer ul{
+footer ul {
     list-style-type: disc;
     color: #D2462A;
     margin: 30px 20px;
@@ -747,12 +818,13 @@ footer ul li {
     margin-bottom: 10px;
 }
 
-footer ul a,footer ul span{
+footer ul a,
+footer ul span {
     color: white;
 
 }
 
-.contact-info ul{
+.contact-info ul {
     list-style-type: none;
     margin: 30px 5px;
 }
@@ -810,7 +882,7 @@ footer ul a,footer ul span{
         box-shadow: 0 0 10px #D2462A;
     }
 
-    .class-card img{
+    .class-card img {
         height: 250px;
         width: 50%;
         object-fit: cover;
@@ -852,7 +924,8 @@ footer ul a,footer ul span{
     .about-content h2::after {
         width: 100px;
     }
-    .our-dance-coaches h2:after{
+
+    .our-dance-coaches h2:after {
         width: 150px;
     }
 
