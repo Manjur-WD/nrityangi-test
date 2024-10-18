@@ -397,6 +397,10 @@ main {
     opacity: 1;
 }
 
+#hero p,.why-choose-us-section p{
+    color: black;
+}
+
 .hero-wrapper .academy {
     color: #737373;
     display: inline-block;
@@ -495,14 +499,14 @@ main {
     width: 100%;
 }
 
-/* .about-horizontal-scroller {
+.about-horizontal-scroller {
     width: 300vw;
     display: flex;
 }
 
 .about-horizontal-scroller .container{
     width: 100vw;
-} */
+}
 
 .about-section h2,
 h3,
@@ -521,6 +525,10 @@ p {
 
 .about-section h3{
     font-size: clamp(1rem , 2vw , 2rem);
+}
+
+.about-section h4{
+    mix-blend-mode: multiply;
 }
 
 /* .about-content h2 {
@@ -628,7 +636,7 @@ p {
 }
 
 .join-dance img {
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 5px 5px 0 black;
 }
 
 .join-dance::before {
