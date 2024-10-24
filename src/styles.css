@@ -8,6 +8,7 @@
 
 html,
 body {
+    background-color: #faf6f5;
     font-family: 'Playfair Display', serif;
     overflow-x: hidden;
 }
@@ -397,7 +398,8 @@ main {
     opacity: 1;
 }
 
-#hero p,.why-choose-us-section p{
+#hero p,
+.why-choose-us-section p {
     color: black;
 }
 
@@ -504,30 +506,31 @@ main {
     display: flex;
 }
 
-.about-horizontal-scroller .container{
+.about-horizontal-scroller .container {
     width: 100vw;
 }
 
 .about-section h2,
-h3,
-p {
+.about-section h3,
+.about-section p {
     color: white;
 }
 
-.about-section h2,.about-content h4 {
-    font-size: clamp(1.5rem , 3.4vw , 3.5rem);
+.about-section h2,
+.about-content h4 {
+    font-size: clamp(1.5rem, 3.4vw, 3.5rem);
 }
 
 
-.about-section p{
-    font-size: clamp(0.8rem , 1vw , 1rem);
+.about-section p {
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-.about-section h3{
-    font-size: clamp(1rem , 2vw , 2rem);
+.about-section h3 {
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
-.about-section h4{
+.about-section h4 {
     mix-blend-mode: multiply;
 }
 
@@ -553,7 +556,9 @@ p {
     margin-top: 20px;
 }
 
-
+.our-featured-classes .content-details p {
+    color: #000;
+}
 
 .about-content h2 img {
     filter: invert(1);
@@ -853,6 +858,140 @@ footer ul span {
 .contact-info ul {
     list-style-type: none;
     margin: 30px 5px;
+}
+
+.breadcrumb-section {
+    position: relative;
+    background: url(./images/breadcrumb-image.jpg) no-repeat center/cover;
+    min-height: 400px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.breadcrumb-title {
+    font-size: clamp(40px, 5vw, 100px);
+    background: linear-gradient(#4B0608, #D2462A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 25px;
+}
+
+.breadcrumb-title::after {
+    content: url(./images/NritangiFlower_breadcrumb.png);
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    transform: translateY(0%);
+}
+
+.breadcumb-navigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: -5px -5px 10px #D2462A;
+}
+
+.about-us-page h1 {
+    font-size: clamp(25px, 5vw, 80px);
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.mission-vision-section {
+    width: 100%;
+}
+
+.mission-vision-section h3 {
+    font-size: clamp(25px, 2.5vw, 40px);
+    font-weight: 700;
+    color: #D2462A;
+}
+
+.mission-vision-section .our-mission,
+.mission-vision-section .our-vision {
+    background: #4B0608;
+    padding: 30px;
+    transition: 0.5s;
+}
+
+.mission-vision-section .our-mission:hover,
+.mission-vision-section .our-vision:hover {
+    background: #000000;
+    scale: 0.9;
+}
+
+.founded-in {
+    position: relative;
+    color: #D2462A;
+    z-index: 99;
+}
+
+.founded-in span {
+    color: #000000;
+    -webkit-text-stroke: 2px #D2462A;
+    font-weight: 900;
+    font-size: clamp(80px, 15vw, 200px);
+    line-height: 100px;
+}
+
+.founder-content h3,
+.teaching-philosophy h3 {
+    font-size: clamp(25px, 3.5vw, 50px);
+    font-weight: bold;
+}
+
+.founder-image {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: white;
+    border: 3px solid #c9c7c7;
+    border-radius: 50%;
+    position: relative;
+    z-index: 99;
+}
+
+.founder-image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #D2462A;
+    position: absolute;
+    left: -50px;
+    top: -20px;
+    border-radius: 50%;
+}
+
+.founder-image::after {
+    content: "";
+    width: 110%;
+    height: 110%;
+    display: block;
+    background-color: #4B0608;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    border-radius: 50%;
+}
+
+.founder-section {
+    background-color: #c9c7c7;
+}
+
+.content-wrapper ul li {
+    list-style-image: url(./images/favicon/favicon-16x16.png);
+    filter: drop-shadow(0 0 5px rgb(231, 231, 231));
 }
 
 

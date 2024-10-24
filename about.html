@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nrityangi Dance Academy</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./src/styles.css">
+    <!-- Remix Icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/favicon/apple-touch-icon.png">
+    <!-- Favicon 32x32 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon/favicon-32x32.png">
+    <!-- Favicon 16x16 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon/favicon-16x16.png">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./src/images/favicon/site.webmanifest">
+    <!-- Lenis smooth scrolling -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                },
+                fontFamily: {
+                    playfair: ['Playfair Display', 'serif'],
+                    inspiration: ['Inspiration', 'cursive'],
+                },
+                extend: {
+                    colors: {
+                        primary: '#4B0608',
+                        secondary: '#D2462A',
+                        tertiary: '#737373',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION START -->
+    <header class="backdrop-blur-md">
+        <div class="header-wrapper flex justify-between items-center py-4 px-6 container">
+            <a href="index.html" class="logo">
+                <img src="./src/images/NritangiLogo.png" alt="Nrityangi Dance Academy">
+            </a>
+            <button class="btn-menu text-2xl">
+                <i class="ri-menu-3-line"></i> MENU
+            </button>
+            <nav id="nav">
+                <button class="btn-close text-2xl">
+                    <i class="ri-close-line"></i>
+                </button>
+                <ul class="flex gap-12">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about.html">About</a></li>
+                    <li><a href="classes.html">Courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- MAIN SECTION START -->
+    <main>
+        <section class="breadcrumb-section flex flex-col justify-center items-center">
+            <p class="breadcrumb-title uppercase font-black">About Us</p>
+            <div class="breadcumb-navigation">
+                <a href="index.html" class="text-secondary">Home</a>
+                <span>/</span>
+                <span>About Us</span>
+            </div>
+        </section>
+        <section
+            class="about-us-page container grid grid-cols-1 lg:grid-cols-2 relative items-center md:min-h-[85vh] lg:gap-3 py-5">
+            <div class="content-about p-10 lg:p-0">
+                <h1><span class="text-primary">Welcome to</span> Nrityangi Dance Academy</h1>
+                <p class="text-black">Nrityangi Dance Academy is dedicated to the preservation and promotion of the
+                    ancient Indian classical
+                    dance form, Odissi. For over 10 years, we have nurtured students of all ages, inspiring them to
+                    express
+                    their creativity through graceful movements and storytelling.</p>
+                <a href="classes.html" class="btn-primary know-about-more-btn px-10 py-4 my-5"><span>Explore Our
+                        Classes
+                    </span><span><img src="./src/images/Arrow 1.png" alt="Nrityangi Dance Academy"
+                            class="inline-block ml-5"></span></a>
+
+            </div>
+            <div class="about-right-image relative p-10 lg:pb-[100px] lg:p-0">
+                <img src="./src/images/about-2.webp" alt="about-image" class="w-[40%] relative z-2">
+                <p class="mt-5 text-2xl text-secondary founded-in">Founded In <br>
+                    <span>2010</span>
+                </p>
+                <img src="./src/images/about-1.webp" alt="about-image" class="w-[45%] absolute top-[20%] left-[30%]">
+            </div>
+        </section>
+        <section class="mission-vision-section my-10">
+            <div class="container grid grid-cols-1 lg:grid-cols-2 gap-4 p-5">
+                <div class="our-mission">
+                    <h3><i class="ri-medal-2-fill"></i>Our Mission</h3>
+                    <p class="text-white">At the heart of our organization lies a profound commitment to preserving and
+                        promoting the
+                        exquisite art of Odissi dance. We strive to create an environment that not only nurtures the
+                        technical and artistic skills of our students but also fosters a deep sense of community,
+                        discipline, and cultural pride. Through our teachings, we aim to instill in our students an
+                        appreciation for this ancient dance form, encouraging them to connect with their heritage and
+                        share it with others.</p>
+                </div>
+                <div class="our-vision">
+                    <h3><i class="ri-medal-2-fill"></i>Our Vision</h3>
+                    <p class="text-white"> Our vision is to emerge as a leading institution for Odissi dance, recognized
+                        for our dedication
+                        to excellence and innovation. We aspire to inspire students from diverse backgrounds around the
+                        globe, encouraging them to delve into and celebrate the rich tapestry of Indian classical dance.
+                        By offering exceptional training and creating opportunities for performance and collaboration,
+                        we hope to ignite a passion for Odissi that transcends borders, cultivating a global community
+                        of dancers who cherish and uphold this timeless art form.</p>
+
+                </div>
+            </div>
+        </section>
+        <section class="founder-section">
+            <div class="container grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div class="founder-image">
+                    <img src="./src/images/founder.png" alt="Founder's Image">
+                </div>
+                <div class="founder-content p-10 lg:p-0">
+                    <h3>Meet Our <span class="text-primary">Founder</span></h3>
+                    <p>[Founder's Name] is a celebrated Odissi dancer and choreographer with [X] years of experience.
+                        Under
+                        their guidance, Nrityangi Dance Academy was established with a commitment to preserving the
+                        traditions
+                        of Odissi while nurturing new generations of dancers.</p>
+                </div>
+            </div>
+        </section>
+        <section class="teaching-philosophy my-10 min-h-[60vh]">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="content-wrapper p-10 lg:p-0">
+                    <h3>Our Teaching<span class="text-secondary">&nbsp;Philosophy</span></span> </h3>
+                    <p>At Nrityangi, we believe in cultivating both technique and expression. Our students are trained
+                        in the rich traditions of Odissi while encouraged to express their individuality through dance.
+                    </p>
+
+                    <ul class="mt-5">
+                        <li><strong>Emphasis on Tradition:</strong> We ensure that every student masters the
+                            foundational techniques of Odissi.</li>
+                        <li><strong>Individual Expression:</strong> Students are encouraged to explore and express their
+                            unique creativity.</li>
+                        <li><strong>Holistic Development:</strong> We focus not only on dance techniques but also on
+                            building confidence and stage presence.</li>
+                        <li><strong>Cultural Immersion:</strong> Each class is a journey into the rich cultural history
+                            of Odisha and Odissi dance.</li>
+                    </ul>
+                </div>
+
+                <div class="image-wrapper relative p-10 lg:p-0">
+                    <img src="./src/images/teaching-1.jpg" alt="Odissi Teaching at Nrityangi Dance Academy"
+                        class="w-full lg:w-1/2 shadow-lg float-left">
+                    <img src="./src/images/teaching-2.jpg" alt="Odissi Teaching at Nrityangi Dance Academy"
+                        class="w-full lg:w-1/2 shadow-lg relative lg:top-[200px] lg:-left-[250px]">
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- MAIN SECTION END -->
+    <footer class="flex flex-col justify-between">
+        <div class="container grid grid-cols-1 lg:grid-cols-4 py-10 px-10 lg:px-0 lg:gap-10">
+            <div class="brand-logo ">
+                <img src="./src/images/Nritangi Logo-1.webp" alt="brand-logo" class="lg:w-[50%] w-full">
+                <h2 class="capitalize text-2xl my-3 text-secondary ">Nrityangi Dance Academy</h2>
+                <p class="text-white mb-3">Discover the Magic of Odissi: Join our supportive community and embark on a
+                    transformative journey of self-discovery and artistic expression.</p>
+                <div class="social-icons mt-10">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div class="quick-links mt-5 flex flex-col items-left lg:pl-20">
+                <h2 class="text-secondary text-2xl">Quick Links:</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Classes & Workshops</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info mt-5 flex flex-col items-left">
+                <h2 class="text-secondary text-2xl">Contact Information:</h2>
+                <ul>
+                    <li><i class="ri-map-pin-range-fill mr-3"></i><span> 135, Shyama Prasad Mukherjee Rd, Anami Sangha,
+                            Lake Range, Kalighat, Kolkata, West Bengal 700026</span></li>
+                    <li><i class="ri-mail-send-fill mr-3"></i><span> abc@gmail.com</span></li>
+                    <li><i class="ri-phone-fill mr-3"></i><span> 9852xxxxxx</span></li>
+                </ul>
+            </div>
+            <div class="additional-info mt-5 flex flex-col items-left">
+                <h2 class="text-secondary text-2xl">Additional Information:</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <h2 class="text-secondary text-2xl">Subscribe:</h2>
+                <form action="#" class="mt-5 subscribe">
+                    <input type="text" placeholder="Write Your Email ID" class="p-3">
+                    <button type="submit" class="p-3 bg-secondary"><i
+                            class="ri-send-plane-fill text-white"></i></button>
+                </form>
+            </div>
+
+        </div>
+        <div class="copyright bg-secondary w-[80%] mx-auto p-5 text-white text-center">
+            © COPYRIGHT 2024 | NRITYANGI DANCE ACADEMY
+        </div>
+
+    </footer>
+
+
+    <!-- GSAP (GreenSock Animation Platform) core library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- GSAP ScrollTrigger plugin (version 3.12.5) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Swiper.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <!-- Main JavaScript file for the website -->
+    <script type="module" src="./src/index.js"></script>
+
+
+
+
+
+</body>
+
+</html>
