@@ -626,6 +626,7 @@ main {
     border-radius: 50px;
     box-shadow: 5px 5px 0px #D2462A;
     transition: 0.5s;
+    font-size: clamp(12px, 1.5vw, 25px)
 }
 
 .know-about-more-btn:active {
@@ -994,6 +995,24 @@ footer ul span {
     filter: drop-shadow(0 0 5px rgb(231, 231, 231));
 }
 
+.get-in-touch{
+    background: url(./images/mission-vision.jpg) no-repeat top/cover;
+    text-align: center;
+    padding: 30px;
+}
+
+.get-in-touch .container{
+background-color: #c9c7c7d7;
+box-shadow: 0 0 10px black;
+}
+
+.get-in-touch .container h3{
+    color: #4B0608;
+    font-weight: 900;
+    font-size: clamp(25px , 5vw, 60px);
+    text-align: center;
+}
+
 
 /* RESPONSIVE CODE */
 
@@ -1052,6 +1071,15 @@ footer ul span {
         width: 50%;
         object-fit: cover;
         object-position: top;
+    }
+
+    .about-horizontal-scroller {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-horizontal-scroller .container {
+        width: 100%;
     }
 
 }

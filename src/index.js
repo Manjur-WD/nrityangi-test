@@ -301,19 +301,22 @@ gsap.utils.toArray(".dance-coach").forEach((card, index) => {
 
 // ABOUT HORIZONTAL SCROLLER
 const aboutHorizon = document.querySelector(".about-horizontal-scroller");
-const amounttoScroll = aboutHorizon.scrollWidth - window.innerWidth;
-console.log(aboutHorizon.scrollWidth);
-console.log(amounttoScroll);
 
-gsap.to(".about-horizontal-scroller", {
-  x: -amounttoScroll,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".about-section",
-    // markers: true,
-    start: "top 5%",
-    end: "+=" + amounttoScroll,
-    scrub: 1,
-    pin: true,
-  },
-});
+if (window.innerWidth > 992) {
+  const amounttoScroll = aboutHorizon.scrollWidth - window.innerWidth;
+
+  console.log(aboutHorizon.scrollWidth);
+  console.log(amounttoScroll);
+
+  gsap.to(".about-horizontal-scroller", {
+    x: -amounttoScroll,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 5%",
+      end: "+=" + amounttoScroll,
+      scrub: 1,
+      pin: true,
+    },
+  });
+}
