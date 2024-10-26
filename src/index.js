@@ -371,3 +371,5 @@ testimonialCards.forEach((card) => {
     ease: "power2.out", // Easing function
   });
 });
+
+
