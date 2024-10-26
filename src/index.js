@@ -320,3 +320,54 @@ if (window.innerWidth > 992) {
     },
   });
 }
+
+// testimonials
+
+const swiper3 = new Swiper(".testimonial-slider.swiper", {
+  direction: "horizontal",
+  loop: true,
+
+  // Add autoplay
+  autoplay: {
+    delay: 3000, // 3 seconds delay between slides
+    disableOnInteraction: false, // Continue autoplay after user interaction
+  },
+  speed: 1000,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    // When window width is <= 1024px (tablets)
+    1024: {
+      slidesPerView: 2, // Show 2 slides on tablets
+      spaceBetween: 20, // Adjust space for tablets
+    },
+    // When window width is <= 768px (mobile)
+    992: {
+      slidesPerView: 1, // Show 1 slide on mobile
+      spaceBetween: 10, // Adjust space for mobile
+    },
+  },
+});
+
+// GSAP ScrollTrigger Animation
+gsap.registerPlugin(ScrollTrigger);
+
+// Select all testimonial cards
+const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+testimonialCards.forEach((card) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%", // Trigger animation when the top of the card hits 80% of the viewport height
+      toggleActions: "play none none reverse",
+    },
+    y: 50, // Start with the card 50 pixels lower
+    opacity: 0, // Start with 0 opacity
+    duration: 0.5, // Animation duration
+    ease: "power2.out", // Easing function
+  });
+});

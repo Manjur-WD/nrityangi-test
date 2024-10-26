@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
 :root {
@@ -558,6 +559,7 @@ main {
 
 .our-featured-classes .content-details p {
     color: #000;
+    font-size: clamp(12px, 1.2vw, 18px);
 }
 
 .about-content h2 img {
@@ -739,7 +741,7 @@ main {
 
 
 .our-featured-classes {
-    background: url(./images/Our\ Featured\ Classes.png) no-repeat top left/cover;
+    background: url(./images/Our\ Featured\ Classes.png) no-repeat bottom center/cover;
     min-height: calc(100vh - 108px);
     width: 100%;
 }
@@ -766,9 +768,9 @@ main {
 
 .class-card>p {
     color: #B1ADAD;
-    font-size: 100px;
+    font-size: clamp(30px, 7vw, 100px);
     font-weight: 900;
-    transform: translateY(50px);
+    transform: translateY(80px);
 }
 
 .class-book-btn {
@@ -914,7 +916,7 @@ footer ul span {
 .mission-vision-section .our-mission,
 .mission-vision-section .our-vision {
     background: #4B0608;
-    padding: 30px;
+    padding: 50px;
     transition: 0.5s;
 }
 
@@ -935,7 +937,7 @@ footer ul span {
     -webkit-text-stroke: 2px #D2462A;
     font-weight: 900;
     font-size: clamp(80px, 15vw, 200px);
-    line-height: 100px;
+    line-height: 180px;
 }
 
 .founder-content h3,
@@ -995,22 +997,81 @@ footer ul span {
     filter: drop-shadow(0 0 5px rgb(231, 231, 231));
 }
 
-.get-in-touch{
+.get-in-touch {
     background: url(./images/mission-vision.jpg) no-repeat top/cover;
     text-align: center;
     padding: 30px;
 }
 
-.get-in-touch .container{
-background-color: #c9c7c7d7;
-box-shadow: 0 0 10px black;
+.get-in-touch .container {
+    background-color: #c9c7c7d7;
+    box-shadow: 0 0 10px black;
 }
 
-.get-in-touch .container h3{
+.get-in-touch .container h3 {
     color: #4B0608;
     font-weight: 900;
-    font-size: clamp(25px , 5vw, 60px);
+    font-size: clamp(25px, 5vw, 60px);
     text-align: center;
+}
+
+.testimonials {
+    background: linear-gradient(#ffffffda, #d2462aab), url(./images/testimonials.webp) no-repeat top/cover;
+    min-height: 80vh;
+}
+
+.testimonials h2 {
+    position: relative;
+    font-size: clamp(1.875rem, 5vw, 60px);
+    line-height: 1.2;
+    margin-bottom: 30px;
+
+}
+
+.testimonials h2::after {
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: block;
+    background-color: #000000;
+    margin-top: 10px;
+}
+
+.testimonial-slider {
+    margin-top: 2rem;
+}
+
+.testimonial-slider .next-prev-btns {
+    display: none;
+}
+
+.testimonial-card {
+    position: relative;
+    background-color: #e7e5e5c5;
+    padding: 50px;
+    margin: 60px 0;
+}
+
+.testimonial-card img {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #D2462A;
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+
+.quote-testi {
+    background: linear-gradient(#4B0608, #D2462A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: -60px;
+    right: 30px;
 }
 
 
@@ -1022,6 +1083,10 @@ box-shadow: 0 0 10px black;
     #about,
     #our-featured-classes {
         height: auto;
+    }
+
+    .our-featured-classes {
+        background: url(./images/Our\ Featured\ Classes.png) no-repeat top left/cover;
     }
 
     .btn-menu,
