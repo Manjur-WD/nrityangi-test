@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nrityangi Dance Academy</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./src/styles.css">
+    <!-- Remix Icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/favicon/apple-touch-icon.png">
+    <!-- Favicon 32x32 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon/favicon-32x32.png">
+    <!-- Favicon 16x16 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon/favicon-16x16.png">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./src/images/favicon/site.webmanifest">
+    <!-- Lenis smooth scrolling -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                },
+                fontFamily: {
+                    playfair: ['Playfair Display', 'serif'],
+                    inspiration: ['Inspiration', 'cursive'],
+                    oswald: ['Oswald', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        primary: '#4B0608',
+                        secondary: '#D2462A',
+                        tertiary: '#737373',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION START -->
+    <header class="backdrop-blur-md">
+        <div class="header-wrapper flex justify-between items-center py-4 px-6 container">
+            <a href="index.html" class="logo">
+                <img src="./src/images/NritangiLogo.png" alt="Nrityangi Dance Academy">
+            </a>
+            <button class="btn-menu text-2xl">
+                <i class="ri-menu-3-line"></i> MENU
+            </button>
+            <nav id="nav">
+                <button class="btn-close text-2xl">
+                    <i class="ri-close-line"></i>
+                </button>
+                <ul class="flex gap-12">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="classes.html">Courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- MAIN SECTION START -->
+    <main>
+        <section class="breadcrumb-section flex flex-col justify-center items-center">
+            <p class="breadcrumb-title uppercase font-black">Courses</p>
+            <div class="breadcumb-navigation">
+                <a href="index.html" class="text-secondary">Home</a>
+                <span>/</span>
+                <span>Courses</span>
+            </div>
+        </section>
+        <section
+            class="class-header relative flex lg:flex-row flex-col items-center  container mb-5 border-b-2 border-slate-300 border-dashed p-5">
+            <img src="./src/images/course-head.webp" alt="courses" class="lg:w-[30%] w-full px-5 drop-shadow-lg mt-5">
+            <div class="content">
+                <h1>Our <span class="text-primary">Classes</span></h1>
+                <p>At Nrityangi Dance Academy, we offer a wide range of Odissi dance classes tailored to different skill
+                    levels and ages. From beginner courses for those just discovering Odissi to advanced classes that
+                    refine your skills and mastery, our curriculum is designed to nurture both technical proficiency and
+                    artistic expression.</p>
+
+                <a href="#" class="btn-primary know-about-more-btn px-10 py-4 my-5"><span><i
+                            class="ri-phone-fill me-2"></i> Know About Classes
+                    </span></a>
+
+            </div>
+        </section>
+
+        <!-- Individual Class Listings -->
+        <section id="class-listings" class="container p-5">
+            <h2 class="font-black uppercase text-3xl md:text-6xl tracking-wider text-right relative mb-20">Class <span
+                    class="text-primary">Listings</span></h2>
+
+            <div class="classlist-container grid lg:grid-cols-3 grid-cols-1 gap-5">
+                <div class="class-going shadow-lg" id="beginner-classes">
+                    <img src="./src/images/dancform-1.webp" alt="class-image">
+                    <div class="content-class p-5">
+                        <h3 class="text-secondary text-2xl font-bold mb-2">Odissi Basics</h3>
+                        <p><strong>Instructor:</strong> Guru Priya</p>
+                        <p><strong>Schedule:</strong> Monday & Wednesday, 6 PM - 7 PM</p>
+                        <p><strong>Duration:</strong> 1 hour per session</p>
+                        <p><strong>Price:</strong> $20 per class</p>
+                        <a href="#" class="btn-primary know-about-more-btn px-10 py-4 my-5 lg:text-xl text-sm"><span> Enroll Now
+                    </span></a>
+                    </div>
+                </div>
+
+                <div class="class-going shadow-lg" id="intermediate-classes">
+                    <img src="./src/images/dancform-2.webp" alt="class-image">
+                    
+                    <div class="content-class p-5">
+                        <h3 class="text-secondary text-2xl font-bold mb-2">Odissi Techniques</h3>
+                        <p><strong>Instructor:</strong> Guru Kiran</p>
+                        <p><strong>Schedule:</strong> Tuesday & Thursday, 7 PM - 8:30 PM</p>
+                        <p><strong>Duration:</strong> 1.5 hours per session</p>
+                        <p><strong>Price:</strong> $30 per class</p>
+                        <a href="#" class="btn-primary know-about-more-btn px-10 py-4 my-5 lg:text-xl text-sm"><span> Enroll Now
+                        </span></a>
+                    </div>
+                </div>
+
+                <div class="class-going shadow-lg" id="advanced-classes">
+                    <img src="./src/images/dancform-3.webp" alt="class-image">
+                    <div class="content-class p-5">
+                        <h3 class="text-secondary text-2xl font-bold mb-2">Odissi Expressions</h3>
+                        <p><strong>Instructor:</strong> Guru Leela</p>
+                        <p><strong>Schedule:</strong> Friday, 5 PM - 7 PM</p>
+                        <p><strong>Duration:</strong> 2 hours per session</p>
+                        <p><strong>Price:</strong> $40 per class</p>
+                        <a href="#" class="btn-primary know-about-more-btn px-10 py-4 my-5 lg:text-xl text-sm"><span> Enroll Now
+                        </span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- MAIN SECTION END -->
+    <footer class="flex flex-col justify-between p-10 lg:p-0">
+        <div class="container grid grid-cols-1 lg:grid-cols-4 py-10 px-10 lg:px-0 lg:gap-10">
+            <div class="brand-logo ">
+                <img src="./src/images/Nritangi Logo-1.webp" alt="brand-logo" class="lg:w-[50%] md:w-[50%] w-full">
+                <h2 class="capitalize text-2xl my-3 text-secondary ">Nrityangi Dance Academy</h2>
+                <p class="text-white mb-3">Discover the Magic of Odissi: Join our supportive community and embark on a
+                    transformative journey of self-discovery and artistic expression.</p>
+                <div class="social-icons mt-10">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div class="quick-links mt-5 flex flex-col items-left lg:pl-20">
+                <h2 class="text-secondary text-2xl">Quick Links:</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Classes & Workshops</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact-info mt-5 flex flex-col items-left">
+                <h2 class="text-secondary text-2xl">Contact Information:</h2>
+                <ul>
+                    <li><i class="ri-map-pin-range-fill mr-3"></i><span> 135, Shyama Prasad Mukherjee Rd, Anami Sangha,
+                            Lake Range, Kalighat, Kolkata, West Bengal 700026</span></li>
+                    <li><i class="ri-mail-send-fill mr-3"></i><span> abc@gmail.com</span></li>
+                    <li><i class="ri-phone-fill mr-3"></i><span> 9852xxxxxx</span></li>
+                </ul>
+            </div>
+            <div class="additional-info mt-5 flex flex-col items-left">
+                <h2 class="text-secondary text-2xl">Additional Information:</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <h2 class="text-secondary text-2xl">Subscribe:</h2>
+                <form action="#" class="mt-5 subscribe">
+                    <input type="text" placeholder="Write Your Email ID" class="p-3">
+                    <button type="submit" class="p-3 bg-secondary"><i
+                            class="ri-send-plane-fill text-white"></i></button>
+                </form>
+            </div>
+
+        </div>
+        <div class="copyright bg-secondary w-[80%] mx-auto p-5 text-white text-center">
+            © COPYRIGHT 2024 | NRITYANGI DANCE ACADEMY
+        </div>
+
+    </footer>
+
+
+    <!-- GSAP (GreenSock Animation Platform) core library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- GSAP ScrollTrigger plugin (version 3.12.5) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Swiper.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <!-- Main JavaScript file for the website -->
+    <script type="module" src="./src/index.js"></script>
+
+</body>
+
+</html>
