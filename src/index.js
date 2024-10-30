@@ -3,6 +3,7 @@ const lenis = new Lenis({
   duration: 1.2,
 });
 
+
 // Request Animation Frame loop
 function raf(time) {
   lenis.raf(time);
@@ -300,26 +301,53 @@ gsap.utils.toArray(".dance-coach").forEach((card, index) => {
 });
 
 // ABOUT HORIZONTAL SCROLLER
-const aboutHorizon = document.querySelector(".about-horizontal-scroller");
+// Ensure the code runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutHorizon = document.querySelector(".about-horizontal-scroller");
 
-if (window.innerWidth > 992) {
-  const amounttoScroll = aboutHorizon.scrollWidth - window.innerWidth;
+  if (aboutHorizon && window.innerWidth > 992) {
+    // Calculate the amount to scroll
+    const amountToScroll = aboutHorizon.scrollWidth - window.innerWidth;
 
-  console.log(aboutHorizon.scrollWidth);
-  console.log(amounttoScroll);
+    console.log("Scroll Width:", aboutHorizon.scrollWidth);
+    console.log("Amount to Scroll:", amountToScroll);
 
-  gsap.to(".about-horizontal-scroller", {
-    x: -amounttoScroll,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".about-section",
-      start: "top 5%",
-      end: "+=" + amounttoScroll,
-      scrub: 1,
-      pin: true,
-    },
-  });
-}
+    // GSAP animation
+    gsap.to(aboutHorizon, {
+      x: -amountToScroll,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 5%",
+        end: "+=" + amountToScroll,
+        scrub: 1,
+        pin: true,
+      },
+    });
+
+    // Optionally, handle window resize
+    window.addEventListener("resize", () => {
+      // Recalculate the amount to scroll on resize
+      const newAmountToScroll = aboutHorizon.scrollWidth - window.innerWidth;
+      gsap.getTweensOf(aboutHorizon).forEach((tween) => {
+        tween.kill(); // Kill existing tween to prevent conflicts
+      });
+      gsap.to(aboutHorizon, {
+        x: -newAmountToScroll,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top 5%",
+          end: "+=" + newAmountToScroll,
+          scrub: 1,
+          pin: true,
+        },
+      });
+    });
+  } else {
+    console.error("Element not found or window width is less than 992px.");
+  }
+});
 
 // testimonials
 
@@ -371,5 +399,3 @@ testimonialCards.forEach((card) => {
     ease: "power2.out", // Easing function
   });
 });
-
-

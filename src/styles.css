@@ -1109,6 +1109,51 @@ footer ul span {
     right: 0;
 }
 
+.gallery-tabs label {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-tabs input:checked+label {
+    background-color: #D2462A;
+    color: white;
+}
+
+[class^="tab-content"] {
+    display: none;
+}
+
+.gallery-section:has(:nth-of-type(1):checked) .tab-content-1,
+.gallery-section:has(:nth-of-type(2):checked) .tab-content-2 {
+    display: block;
+}
+
+.gallery-item{
+    overflow: hidden;
+}
+
+
+.overlay-gallery {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: #000000af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.gallery-item:hover .overlay-gallery{
+    color: #D2462A;
+    transform: scale(1);
+}
+
 /* RESPONSIVE CODE */
 
 @media(max-width: 992px) {
