@@ -643,9 +643,6 @@ main {
     box-shadow: 5px 5px 0px #4B0608;
 }
 
-.join-dance img {
-    box-shadow: 5px 5px 0 black;
-}
 
 .join-dance::before {
     content: "";
@@ -1130,7 +1127,7 @@ footer ul span {
     display: block;
 }
 
-.gallery-item{
+.gallery-item {
     overflow: hidden;
 }
 
@@ -1149,9 +1146,30 @@ footer ul span {
     transition: all 0.2s ease-in-out;
 }
 
-.gallery-item:hover .overlay-gallery{
+.gallery-item:hover .overlay-gallery {
     color: #D2462A;
     transform: scale(1);
+}
+
+.nrityangi-contect-form form div {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #575757;
+    padding: 10px 0;
+}
+
+.nrityangi-contect-form form input:focus,
+.nrityangi-contect-form form textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.nrityangi-contect-form button:hover {
+    background-color: #000;
+}
+
+.nrityangi-contect-form button:active{
+scale: 0.95;
 }
 
 /* RESPONSIVE CODE */
